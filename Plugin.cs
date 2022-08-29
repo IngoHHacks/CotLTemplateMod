@@ -5,6 +5,8 @@ using COTL_API.CustomInventory;
 using CotLTemplateMod.Items;
 using System.IO;
 using static InventoryItem;
+using COTL_API.CustomFollowerCommand;
+using CotLTemplateMod.CustomFollowerCommands;
 
 namespace CotLTemplateMod
 {
@@ -24,6 +26,8 @@ namespace CotLTemplateMod
 
         internal static ITEM_TYPE ExampleItem;
 
+        internal static FollowerCommands FollowerCommand;
+
         private void Awake()
         {
             Logger.LogInfo($"Loaded {PluginName}!");
@@ -32,6 +36,7 @@ namespace CotLTemplateMod
             PluginPath = Path.GetDirectoryName(Info.Location);
 
             ExampleItem = CustomItemManager.Add(new ExampleItem());
+            FollowerCommand = CustomFollowerCommandManager.Add(new ExampleFollowerCommand());
         }
 
         private void OnEnable()
