@@ -28,10 +28,4 @@
         <PackageReference Include="CultOfTheLamb.GameLibs" Version="1.0.12-*" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Reference Include="COTL_API" Private="false">
-        <HintPath>lib\COTL_API.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
 </Project>

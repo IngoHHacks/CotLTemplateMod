@@ -1,13 +1,6 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using COTL_API.CustomInventory;
-using CotLTemplateMod.Items;
-using System.IO;
-using static InventoryItem;
-using COTL_API.CustomFollowerCommand;
-using CotLTemplateMod.CustomFollowerCommands;
-
 namespace CotLTemplateMod
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVer)]
@@ -23,20 +16,12 @@ namespace CotLTemplateMod
         internal readonly static Harmony Harmony = new(PluginGuid);
 
         internal static string PluginPath;
-
-        internal static ITEM_TYPE ExampleItem;
-
         internal static FollowerCommands FollowerCommand;
 
         private void Awake()
         {
             Logger.LogInfo($"Loaded {PluginName}!");
             Plugin.Log = base.Logger;
-
-            PluginPath = Path.GetDirectoryName(Info.Location);
-
-            ExampleItem = CustomItemManager.Add(new ExampleItem());
-            FollowerCommand = CustomFollowerCommandManager.Add(new ExampleFollowerCommand());
         }
 
         private void OnEnable()
