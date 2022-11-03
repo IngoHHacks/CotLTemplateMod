@@ -20,7 +20,6 @@ namespace CotLTemplateMod
 
         private void Awake()
         {
-            Logger.LogInfo($"Loaded {PluginName}!");
             Plugin.Log = base.Logger;
         }
 
