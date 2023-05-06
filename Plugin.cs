@@ -1,6 +1,3 @@
-using BepInEx;
-using BepInEx.Logging;
-using HarmonyLib;
 namespace CotLTemplateMod
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVer)]
@@ -20,19 +17,19 @@ namespace CotLTemplateMod
 
         private void Awake()
         {
-            Plugin.Log = base.Logger;
+            Log = Logger;
         }
 
         private void OnEnable()
         {
             Harmony.PatchAll();
-            Logger.LogInfo($"Loaded {PluginName}!");
+            LogInfo($"Loaded {PluginName}!");
         }
 
         private void OnDisable()
         {
             Harmony.UnpatchSelf();
-            Logger.LogInfo($"Unloaded {PluginName}!");
+            LogInfo($"Unloaded {PluginName}!");
         }
     }
 }
