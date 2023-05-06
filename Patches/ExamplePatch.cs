@@ -1,10 +1,4 @@
-﻿using HarmonyLib;
-using Lamb.UI;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CotLTemplateMod.Patches
+﻿namespace CotLTemplateMod.Patches
 {
     [HarmonyPatch]
     internal class ExamplePatch

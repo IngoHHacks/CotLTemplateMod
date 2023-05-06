@@ -1,13 +1,10 @@
 ﻿using COTL_API.CustomFollowerCommand;
-using UnityEngine;
 
 namespace CotLTemplateMod.CustomFollowerCommands
 {
     internal class ExampleFollowerCommand : CustomFollowerCommand
     {
         public override string InternalName => "Example_Follower_Command";
-
-        public override Sprite CommandIcon => base.CommandIcon;
 
         public override string GetTitle(Follower follower)
         {

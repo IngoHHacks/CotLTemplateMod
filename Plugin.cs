@@ -1,9 +1,9 @@
-using COTL_API.CustomInventory;
-using CotLTemplateMod.Items;
 using System.IO;
-using static InventoryItem;
+using COTL_API.CustomInventory;
 using COTL_API.CustomFollowerCommand;
+using CotLTemplateMod.Items;
 using CotLTemplateMod.CustomFollowerCommands;
+using static InventoryItem;
     
 namespace CotLTemplateMod
 {

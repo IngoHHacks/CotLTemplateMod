@@ -1,6 +1,4 @@
-﻿using BepInEx.Logging;
-
-namespace CotLTemplateMod;
+﻿namespace CotLTemplateMod;
 
 public static class Logging
 {
