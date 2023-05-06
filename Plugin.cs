@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace CotLTemplateMod
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVer)]
@@ -18,6 +20,7 @@ namespace CotLTemplateMod
         private void Awake()
         {
             Log = Logger;
+            PluginPath = Path.GetDirectoryName(Info.Location);
         }
 
         private void OnEnable()
